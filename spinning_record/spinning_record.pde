@@ -5,7 +5,7 @@ pictureOfRecord= loadImage("record.gif");
   size(pictureOfRecord.width, pictureOfRecord.height);  
 }
 void draw(){
-  image(pictureOfRecord,120,120);
+  image(pictureOfRecord,2,2);
   
 }
 void rotateImage(PImage image, int amountToRotate) {
