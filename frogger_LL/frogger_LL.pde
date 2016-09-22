@@ -12,8 +12,9 @@ class car{
  int ypos;
  int lpos;
  int spos;
-  car(int x,int y,int l,int s){
  
+  car(int x,int y,int l,int s){
+   
     rect(x,y,30,50);
     xpos = x;
     ypos = y;
@@ -21,6 +22,7 @@ class car{
     spos = s;
     fill(0,0,255);
   }
+
     void display() 
   {
     fill(0,0,255);
@@ -67,7 +69,7 @@ if ((y > car.getYpos() && y < car.getYpos()+50) && (x > car.getXpos() && x < car
 void setup(){
  
   size(400,400);
-   c = new car(0,200,30,2);
+   c = new car(20,200,30,2);
    c1 = new car(350,140,30,-5);
   c2 = new car(200, 80,30,-3);
   c3 = new car(200,10,30,4);
@@ -92,6 +94,7 @@ void draw(){
   c4.display();
   c5.moveL();
   c5.display();
+ 
   cheating();
   if(intersects(c)||intersects(c1)||intersects(c2)||intersects(c3)||intersects(c4)||intersects(c5)){
     println("You Lost.");
