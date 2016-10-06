@@ -1,5 +1,6 @@
 //1. Create a constructor for you hackertyper to initialize your x, y, lineLength and lineSpace
 int keys = 0;
+int a ;
 class HackerTyper {
   int xOffset ;
   int yOffset ;
@@ -107,12 +108,14 @@ void setup() {
 
 
   //3. Add some hacker text to your hackerTyper (Make it look hackerish!)
-
-hack.add("request access.hack.cia.net.gov+passcodeh.tackover computer.my computer. server. 160(google);");
+ hack.add("request access.hack.cia.net.gov+passcodeh.tackover computer.my computer. server. 160(google);");
 hack.add("request ajhkj");
 hack.add("request access.hack.cia.net.gov+passcode.my computer. server. 160(internet explorer);");
 hack.add("request access.tackover computer.my computer. server. 160(bing);");
 hack.add("j.president(+passcode);");
+hack.add("hacking... loading(need passcode)...recieved;");
+
+
 }
 
 void draw() {
@@ -143,6 +146,9 @@ if(keys >500){
 void keyPressed(){
   hack.printNext();
   keys +=2;
+ 
+  hack.add("loading data...5.689 microsoft program. " + a +" finished");
+  a += 1;
 }
 
 //7. call the printNext method from your hacker typer in your keypressed method
